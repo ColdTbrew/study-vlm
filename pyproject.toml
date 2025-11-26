@@ -3,7 +3,7 @@ name = "study-ocr"
 version = "0.1.0"
 description = "Hands-on OCR/VLM practice (LLaVA, BLIP-2 Q-Former, CLIP) with Jupyter"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.14"
 dependencies = [
     "accelerate",
     "bitsandbytes",
@@ -14,29 +14,12 @@ dependencies = [
     "sentencepiece",
     "torch",
     "torchvision",
-    "transformers",
+    "transformers>=4.57.3",
     "ipywidgets",
     "pillow-heif",
     "torchinfo",
     "torchviz",
     "graphviz",
     "sentence-transformers",
-    "deepseek-vl2 @ file:///home/seunghyuk/workspace/study_ocr/deepseek_vl2_source",
+    "sam3",
 ]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.metadata]
-allow-direct-references = true
-
-[tool.hatch.build.targets.wheel]
-only-include = [
-    "ocr_practice.ipynb",
-    "README.md",
-    "pyproject.toml",
-]
-
-[dependency-groups]
-dev = ["ruff"]
