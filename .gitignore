@@ -3,3 +3,5 @@ sample
 sample_images
 sample_images_from_kaggle
 *.pkl
+.DS_Store
+._.DS_Store
